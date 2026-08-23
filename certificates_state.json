@@ -230,5 +230,13 @@
     "is_missing_p12": false,
     "valid_from": "Aug 25 01:31:00 2025 GMT",
     "valid_to": "Aug 25 01:31:00 2026 GMT"
+  },
+  "30": {
+    "name": "HSBC Bank plc",
+    "status": "\u2705 Signed",
+    "folder_name": "HSBC Bank plc",
+    "is_missing_p12": false,
+    "valid_from": "May 4 05:56:26 2026 GMT",
+    "valid_to": "May 4 05:56:26 2027 GMT"
   }
 }
