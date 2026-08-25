@@ -237,8 +237,37 @@ def main():
             
             del state[cert_id_str]
     
+    # Clean up orphaned certificate directories (exist on disk but not in state)
+    tracked_folder_names = {cert_info.get('folder_name', f"cert_{cert_id}") for cert_id, cert_info in state.items()}
+    orphaned_count = 0
+    orphaned_folder_names = []
+    for cert_dir in CERT_DIR.iterdir():
+        if cert_dir.is_dir() and cert_dir.name not in tracked_folder_names:
+            import shutil
+            print(f"🗑️  Removing orphaned certificate directory: {cert_dir.name}")
+            shutil.rmtree(cert_dir)
+            orphaned_count += 1
+            orphaned_folder_names.append(cert_dir.name)
+    
+    # Clean up signed apps for orphaned certificates
+    if orphaned_folder_names:
+        import shutil
+        signed_apps_dir = Path(__file__).parent.parent / "signed_apps"
+        if signed_apps_dir.exists():
+            for app_dir in signed_apps_dir.iterdir():
+                if app_dir.is_dir():
+                    for cert_dir in app_dir.iterdir():
+                        if cert_dir.is_dir() and cert_dir.name in orphaned_folder_names:
+                            print(f"🗑️  Removing signed app for orphaned certificate: {app_dir.name}/{cert_dir.name}")
+                            shutil.rmtree(cert_dir)
+    
     if removed_certs:
         print(f"Removed {len(removed_certs)} certificates that are no longer available")
+    
+    if orphaned_count > 0:
+        print(f"Cleaned up {orphaned_count} orphaned certificate directories")
+        # Signal that certificates were removed to trigger cleanup in sign_apps
+        removed_certs.append("orphaned_directories")
     
     # Save updated state
     save_state(state)
@@ -246,6 +275,38 @@ def main():
     print("=" * 50)
     print(f"Certificate sync completed. Active certificates: {len(state)}")
     print(f"Added certificates: {len(added_certs)}, Removed certificates: {len(removed_certs)}")
+    
+    # Check if we have certificates that need signing (certificates exist but aren't in signed_apps)
+    # This handles the case where certificates were downloaded but signing was skipped
+    signed_apps_dir = Path(__file__).parent.parent / "signed_apps"
+    certs_needing_signing = []
+    
+    if signed_apps_dir.exists():
+        for cert_id, cert_info in state.items():
+            folder_name = cert_info.get('folder_name', f"cert_{cert_id}")
+            cert_dir = CERT_DIR / folder_name
+            
+            # Check if certificate files exist
+            cert_files = get_certificate_files(cert_dir)
+            has_files = cert_files['p12'] and cert_files['mobileprovision'] and cert_files['password']
+            
+            if has_files:
+                # Check if this certificate has been used to sign any app
+                has_signed_apps = False
+                for app_dir in signed_apps_dir.iterdir():
+                    if app_dir.is_dir():
+                        app_cert_dir = app_dir / folder_name
+                        if app_cert_dir.exists():
+                            has_signed_apps = True
+                            break
+                
+                if not has_signed_apps:
+                    certs_needing_signing.append(str(cert_id))
+    
+    if certs_needing_signing:
+        print(f"Certificates needing signing: {len(certs_needing_signing)} ({certs_needing_signing})")
+        # Treat these as added certificates to trigger signing
+        added_certs.extend(certs_needing_signing)
     
     # Return added and removed certificate IDs for use by other scripts
     return added_certs, removed_certs

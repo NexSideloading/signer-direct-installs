@@ -109,6 +109,8 @@ def main():
         # Certificates removed - cleanup handled by sign_apps.py
         needs_signing = True
         print(f"📝 Certificates removed: {removed_certs} - will cleanup signed apps")
+        # Force signing with all certificates to ensure consistency after cleanup
+        force_all = True
     else:
         # No changes
         print("✅ No changes detected - skipping signing")

@@ -534,6 +534,10 @@ def main(force_apps=None, force_certs=None, force_all=False):
                 # Certificate folder doesn't exist, need to sign
                 needs_signing = True
                 reason = "certificate folder missing"
+            elif not current_state:
+                # No signing state exists for this cert, need to sign
+                needs_signing = True
+                reason = "no signing state"
             elif not (current_state.get('ipa_hash') == ipa_version and current_state.get('cert_version') == cert_info.get('valid_to')):
                 needs_signing = True
                 reason = "version mismatch"
@@ -593,6 +597,10 @@ def main(force_apps=None, force_certs=None, force_all=False):
     
     # Cleanup: Remove signed apps for certificates that no longer exist
     print("\nCleaning up obsolete signed apps...")
+    
+    # Get valid certificate folder names from state
+    valid_cert_folder_names = {cert_info.get('folder_name', f"cert_{cert_id}") for cert_id, cert_info in cert_state.items()}
+    
     for app_name in list(signing_state.keys()):
         for cert_id_str in list(signing_state[app_name].keys()):
             if cert_id_str not in cert_state:
@@ -604,6 +612,14 @@ def main(force_apps=None, force_certs=None, force_all=False):
                 print(f"  🗑️ Removed {app_name}/{cert_name}")
                 
                 del signing_state[app_name][cert_id_str]
+        
+        # Also clean up signed apps for orphaned certificates (exist on disk but not in state)
+        app_dir = OUTPUT_DIR / app_name
+        if app_dir.exists():
+            for cert_dir in app_dir.iterdir():
+                if cert_dir.is_dir() and cert_dir.name not in valid_cert_folder_names:
+                    shutil.rmtree(cert_dir, ignore_errors=True)
+                    print(f"  🗑️ Removed orphaned signed app: {app_name}/{cert_dir.name}")
         
         # Remove app entry if no certificates left
         if not signing_state[app_name]:
