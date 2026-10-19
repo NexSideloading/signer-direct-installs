@@ -191,6 +191,12 @@
       "cert_version": "Jun 13 11:25:07 2027 GMT",
       "cert_name": "Moving Increasingly Interconnected Technology Co., Ltd (com.oa11)",
       "timestamp": "1792168136.609948"
+    },
+    "33": {
+      "ipa_hash": "5.0.2",
+      "cert_version": "Nov 5 05:04:09 2026 GMT",
+      "cert_name": "RAKUTEN SECURITIES,INC",
+      "timestamp": "1792442650.5938976"
     }
   },
   "Ksign": {
@@ -385,6 +391,12 @@
       "cert_version": "Jun 13 11:25:07 2027 GMT",
       "cert_name": "Moving Increasingly Interconnected Technology Co., Ltd (com.oa11)",
       "timestamp": "1792168185.529177"
+    },
+    "33": {
+      "ipa_hash": "1.6",
+      "cert_version": "Nov 5 05:04:09 2026 GMT",
+      "cert_name": "RAKUTEN SECURITIES,INC",
+      "timestamp": "1792442651.9529085"
     }
   },
   "Feather": {
@@ -579,6 +591,12 @@
       "cert_version": "Jun 13 11:25:07 2027 GMT",
       "cert_name": "Moving Increasingly Interconnected Technology Co., Ltd (com.oa11)",
       "timestamp": "1792168107.702806"
+    },
+    "33": {
+      "ipa_hash": "2.9.0",
+      "cert_version": "Nov 5 05:04:09 2026 GMT",
+      "cert_name": "RAKUTEN SECURITIES,INC",
+      "timestamp": "1792442649.7858913"
     }
   },
   "Scarlet": {
@@ -773,6 +791,12 @@
       "cert_version": "Jun 13 11:25:07 2027 GMT",
       "cert_name": "Moving Increasingly Interconnected Technology Co., Ltd (com.oa11)",
       "timestamp": "1792168228.9593058"
+    },
+    "33": {
+      "ipa_hash": "1.0",
+      "cert_version": "Nov 5 05:04:09 2026 GMT",
+      "cert_name": "RAKUTEN SECURITIES,INC",
+      "timestamp": "1792442653.1829185"
     }
   }
 }
