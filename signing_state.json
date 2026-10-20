@@ -195,8 +195,14 @@
     "33": {
       "ipa_hash": "5.0.2",
       "cert_version": "Nov 5 05:04:09 2026 GMT",
-      "cert_name": "RAKUTEN SECURITIES,INC",
-      "timestamp": "1792442650.5938976"
+      "cert_name": "RAKUTEN SECURITIES,INC. (iSpeed WidgetApp Dev)",
+      "timestamp": "1792479117.117096"
+    },
+    "34": {
+      "ipa_hash": "5.0.2",
+      "cert_version": "Feb 9 01:15:30 2027 GMT",
+      "cert_name": "RAKUTEN SECURITIES,INC. (shisankeisei Pushnotification)",
+      "timestamp": "1792479118.1140838"
     }
   },
   "Ksign": {
@@ -395,8 +401,14 @@
     "33": {
       "ipa_hash": "1.6",
       "cert_version": "Nov 5 05:04:09 2026 GMT",
-      "cert_name": "RAKUTEN SECURITIES,INC",
-      "timestamp": "1792442651.9529085"
+      "cert_name": "RAKUTEN SECURITIES,INC. (iSpeed WidgetApp Dev)",
+      "timestamp": "1792479119.817063"
+    },
+    "34": {
+      "ipa_hash": "1.6",
+      "cert_version": "Feb 9 01:15:30 2027 GMT",
+      "cert_name": "RAKUTEN SECURITIES,INC. (shisankeisei Pushnotification)",
+      "timestamp": "1792479121.521042"
     }
   },
   "Feather": {
@@ -595,8 +607,14 @@
     "33": {
       "ipa_hash": "2.9.0",
       "cert_version": "Nov 5 05:04:09 2026 GMT",
-      "cert_name": "RAKUTEN SECURITIES,INC",
-      "timestamp": "1792442649.7858913"
+      "cert_name": "RAKUTEN SECURITIES,INC. (iSpeed WidgetApp Dev)",
+      "timestamp": "1792479114.5311275"
+    },
+    "34": {
+      "ipa_hash": "2.9.0",
+      "cert_version": "Feb 9 01:15:30 2027 GMT",
+      "cert_name": "RAKUTEN SECURITIES,INC. (shisankeisei Pushnotification)",
+      "timestamp": "1792479116.1201081"
     }
   },
   "Scarlet": {
@@ -795,8 +813,14 @@
     "33": {
       "ipa_hash": "1.0",
       "cert_version": "Nov 5 05:04:09 2026 GMT",
-      "cert_name": "RAKUTEN SECURITIES,INC",
-      "timestamp": "1792442653.1829185"
+      "cert_name": "RAKUTEN SECURITIES,INC. (iSpeed WidgetApp Dev)",
+      "timestamp": "1792479123.014024"
+    },
+    "34": {
+      "ipa_hash": "1.0",
+      "cert_version": "Feb 9 01:15:30 2027 GMT",
+      "cert_name": "RAKUTEN SECURITIES,INC. (shisankeisei Pushnotification)",
+      "timestamp": "1792479124.503005"
     }
   }
 }

@@ -256,11 +256,19 @@
     "valid_to": "Jun 13 11:25:07 2027 GMT"
   },
   "33": {
-    "name": "RAKUTEN SECURITIES,INC",
+    "name": "RAKUTEN SECURITIES,INC. (iSpeed WidgetApp Dev)",
     "status": "\u2705 Signed",
-    "folder_name": "RAKUTEN SECURITIES,INC",
+    "folder_name": "RAKUTEN SECURITIES,INC. (iSpeed WidgetApp Dev)",
     "is_missing_p12": false,
     "valid_from": "Nov 5 05:04:09 2025 GMT",
     "valid_to": "Nov 5 05:04:09 2026 GMT"
+  },
+  "34": {
+    "name": "RAKUTEN SECURITIES,INC. (shisankeisei Pushnotification)",
+    "status": "\u2705 Signed",
+    "folder_name": "RAKUTEN SECURITIES,INC. (shisankeisei Pushnotification)",
+    "is_missing_p12": false,
+    "valid_from": "Feb 9 01:15:30 2026 GMT",
+    "valid_to": "Feb 9 01:15:30 2027 GMT"
   }
 }
