@@ -1,18 +1,30 @@
 {
   "Ksign": {
     "hash": "57fbab135bdcd584faf095099f0913df634ce17081bc164ce82f3d91e3978483",
-    "last_updated": "1787035645.3257132"
+    "last_updated": "1793416862.6136422",
+    "etag": "\"0x8DEB9E1366CD487\"",
+    "last_modified": "Sun, 24 May 2026 22:10:06 GMT",
+    "content_length": "16394645"
   },
   "Feather": {
     "hash": "833c57d3c4bf4b4a9fe408be72e1c720cbb949f736a00286750f50e7915730ea",
-    "last_updated": "1787035645.9247143"
+    "last_updated": "1793416862.5846424",
+    "etag": "\"0x8DEDA3AB3E7F809\"",
+    "last_modified": "Sun, 05 Jul 2026 02:11:19 GMT",
+    "content_length": "14241853"
   },
   "ESign": {
     "hash": "f00116a398972c83bc13b8c0b10d2a6ee580e404aa122bd6b4aadb4a1e479a29",
-    "last_updated": "1787035646.4807153"
+    "last_updated": "1793416862.5586424",
+    "etag": "\"0x8DCE069257764A7\"",
+    "last_modified": "Sun, 29 Sep 2024 09:28:58 GMT",
+    "content_length": "7522792"
   },
   "Scarlet": {
     "hash": "987b557bca27c06de42e4e236de55e112f8ee17920e3d29cc8b2f04a4f328431",
-    "last_updated": "1787035649.490721"
+    "last_updated": "1793416862.6426423",
+    "etag": "W/\"44164cf5ea920f60cd136aed1cc45d84d1510e08548be708c125557290cc95cc\"",
+    "last_modified": null,
+    "content_length": "15515487"
   }
 }
