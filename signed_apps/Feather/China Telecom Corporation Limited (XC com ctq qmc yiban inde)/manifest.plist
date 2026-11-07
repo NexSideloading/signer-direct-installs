@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>assets</key>
+            <array>
+                <dict>
+                    <key>kind</key>
+                    <string>software-package</string>
+                    <key>url</key>
+                    <string>https://raw.githubusercontent.com/NexSideloading/signer-direct-installs/main/signed_apps/Feather/China%20Telecom%20Corporation%20Limited%20%28XC%20com%20ctq%20qmc%20yiban%20inde%29/signed.ipa</string>
+                </dict>
+                <dict>
+                    <key>kind</key>
+                    <string>display-image</string>
+                    <key>url</key>
+                    <string>https://raw.githubusercontent.com/NexSideloading/signer-direct-installs/main/icons/Feather_icon.png</string>
+                </dict>
+                <dict>
+                    <key>kind</key>
+                    <string>full-size-image</string>
+                    <key>url</key>
+                    <string>https://raw.githubusercontent.com/NexSideloading/signer-direct-installs/main/icons/Feather_icon.png</string>
+                </dict>
+            </array>
+            <key>metadata</key>
+            <dict>
+                <key>bundle-identifier</key>
+                <string>thewonderofyou.Feather</string>
+                <key>bundle-version</key>
+                <string>2.9.0</string>
+                <key>kind</key>
+                <string>software</string>
+                <key>title</key>
+                <string>Feather</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
