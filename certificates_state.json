@@ -166,5 +166,13 @@
     "is_missing_p12": false,
     "valid_from": "Dec 2 07:34:16 2025 GMT",
     "valid_to": "Dec 2 07:34:16 2026 GMT"
+  },
+  "22": {
+    "name": "Ecolab Inc",
+    "status": "\u2705 Signed",
+    "folder_name": "Ecolab Inc",
+    "is_missing_p12": false,
+    "valid_from": "Sep 6 11:40:12 2026 GMT",
+    "valid_to": "Sep 6 11:40:12 2027 GMT"
   }
 }
